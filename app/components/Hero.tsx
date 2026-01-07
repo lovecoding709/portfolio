@@ -61,7 +61,11 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="mb-6"
           >
-            Hello, I&apos;m Your Name
+            Hello, I&apos;m Yurii Khyzhniak
+            <br />
+            <span className="text-neutral-900">
+              Web3 Designer & SaaS Developer
+            </span>
           </motion.h1>
 
           <motion.p

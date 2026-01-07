@@ -1,5 +1,5 @@
 "use client";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -15,7 +15,7 @@ export function Footer() {
             viewport={{ once: true }}
           >
             <p className="text-neutral-400">
-              © {currentYear} Your Name. All rights reserved.
+              © {currentYear} Yurii Khyzhniak. All rights reserved.
             </p>
           </motion.div>
 
@@ -26,13 +26,22 @@ export function Footer() {
             viewport={{ once: true }}
             className="flex gap-6"
           >
-            <a href="#" className="text-neutral-400 hover:text-white transition-colors">
+            <a
+              href="#"
+              className="text-neutral-400 hover:text-white transition-colors"
+            >
               Privacy
             </a>
-            <a href="#" className="text-neutral-400 hover:text-white transition-colors">
+            <a
+              href="#"
+              className="text-neutral-400 hover:text-white transition-colors"
+            >
               Terms
             </a>
-            <a href="#" className="text-neutral-400 hover:text-white transition-colors">
+            <a
+              href="#"
+              className="text-neutral-400 hover:text-white transition-colors"
+            >
               Cookies
             </a>
           </motion.div>
