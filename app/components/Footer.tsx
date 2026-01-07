@@ -15,7 +15,7 @@ export function Footer() {
             viewport={{ once: true }}
           >
             <p className="text-neutral-400">
-              © {currentYear} Yurii Khyzhniak. All rights reserved.
+              © {currentYear} Your Name. All rights reserved.
             </p>
           </motion.div>
 

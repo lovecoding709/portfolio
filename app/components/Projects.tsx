@@ -1,34 +1,40 @@
 "use client";
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: 'E-Commerce Platform',
-    description: 'A modern e-commerce platform with seamless checkout experience and real-time inventory management.',
-    image: 'https://images.unsplash.com/photo-1595411425732-e69c1abe2763?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhYnN0cmFjdCUyMGdlb21ldHJpYyUyMHBhdHRlcm58ZW58MXx8fHwxNzY2NTEyMTYzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['React', 'TypeScript', 'Tailwind'],
-    link: '#',
-    github: '#'
+    title: "AnimStats",
+    description:
+      "A comprehensive anime statistics platform with detailed analytics, trending shows, and user ratings.",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmltZSUyMHN0YXRpc3RpY3MlMjBkYXNoYm9hcmR8ZW58MXx8fHwxNzY3ODAzMzM5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    tags: ["React", "Analytics", "API"],
+    link: "https://www.animstats.com/",
+    github: "#",
   },
   {
-    title: 'Design System',
-    description: 'A comprehensive design system and component library used across multiple products.',
-    image: 'https://images.unsplash.com/photo-1519662978799-2f05096d3636?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBhcmNoaXRlY3R1cmV8ZW58MXx8fHwxNzY2NTMwNDkyfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['Design', 'Figma', 'React'],
-    link: '#',
-    github: '#'
+    title: "CryptoKet NFT Marketplace",
+    description:
+      "A decentralized NFT marketplace for buying, selling, and trading digital collectibles with crypto payments.",
+    image:
+      "https://images.unsplash.com/photo-1630463853299-75a5f73da1ca?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxuZnQlMjBtYXJrZXRwbGFjZSUyMGNyeXB0b3xlbnwxfHx8fDE3Njc4MDMzNDB8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    tags: ["Web3", "NFT", "Blockchain"],
+    link: "https://crypto-ket-nft-marketplace.vercel.app/",
+    github: "#",
   },
   {
-    title: 'Portfolio Website',
-    description: 'A creative portfolio website with smooth animations and interactive elements.',
-    image: 'https://images.unsplash.com/photo-1505209487757-5114235191e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwd29ya3NwYWNlJTIwZGVza3xlbnwxfHx8fDE3NjY0OTg4MjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-    tags: ['Next.js', 'Motion', 'CSS'],
-    link: '#',
-    github: '#'
-  }
+    title: "Portfolio Website",
+    description:
+      "A creative portfolio website with smooth animations and interactive elements.",
+    image:
+      "https://images.unsplash.com/photo-1505209487757-5114235191e5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsJTIwd29ya3NwYWNlJTIwZGVza3xlbnwxfHx8fDE3NjY0OTg4MjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    tags: ["Next.js", "Motion", "CSS"],
+    link: "#",
+    github: "#",
+  },
 ];
 
 export function Projects() {
@@ -45,7 +51,8 @@ export function Projects() {
         >
           <h2 className="mb-4 text-center">Featured Projects</h2>
           <p className="text-center text-neutral-600 mb-12 max-w-2xl mx-auto">
-            A selection of my recent work, showcasing diverse projects from web applications to design systems.
+            A selection of my recent work, showcasing diverse projects from web
+            applications to design systems.
           </p>
         </motion.div>
 
@@ -66,13 +73,11 @@ export function Projects() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
-              
+
               <div className="p-6">
                 <h3 className="mb-2">{project.title}</h3>
-                <p className="text-neutral-600 mb-4">
-                  {project.description}
-                </p>
-                
+                <p className="text-neutral-600 mb-4">{project.description}</p>
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
                     <span

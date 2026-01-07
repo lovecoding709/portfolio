@@ -1,25 +1,32 @@
 "use client";
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef } from 'react';
-import { Code, Palette, Sparkles } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef } from "react";
+import { Code, Palette, Sparkles } from "lucide-react";
 
 const skillCategories = [
   {
     icon: Code,
-    title: 'Development',
-    skills: ['React', 'TypeScript', 'Node.js', 'Next.js', 'Tailwind CSS', 'GraphQL']
+    title: "Web3 & Blockchain",
+    skills: [
+      "Solidity",
+      "Ethers.js",
+      "Web3.js",
+      "Smart Contracts",
+      "NFTs",
+      "DeFi",
+    ],
   },
   {
     icon: Palette,
-    title: 'Design',
-    skills: ['Figma', 'Adobe XD', 'Photoshop', 'Illustrator', 'UI/UX', 'Prototyping']
+    title: "SaaS Development",
+    skills: ["React", "TypeScript", "Node.js", "Next.js", "AWS", "MongoDB"],
   },
   {
     icon: Sparkles,
-    title: 'Other',
-    skills: ['Git', 'CI/CD', 'Testing', 'Agile', 'SEO', 'Performance']
-  }
+    title: "Design & Tools",
+    skills: ["Figma", "UI/UX", "Tailwind CSS", "Git", "Docker", "CI/CD"],
+  },
 ];
 
 export function Skills() {
@@ -36,7 +43,9 @@ export function Skills() {
         >
           <h2 className="mb-4 text-center">Skills & Expertise</h2>
           <p className="text-center text-neutral-600 mb-12 max-w-2xl mx-auto">
-            A diverse toolkit of technologies and design practices I use to bring ideas to life.
+            Specialized in Web3 technologies and SaaS development with a
+            comprehensive toolkit for building decentralized and scalable
+            applications.
           </p>
         </motion.div>
 
@@ -47,7 +56,9 @@ export function Skills() {
               <motion.div
                 key={category.title}
                 initial={{ opacity: 0, y: 30 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                animate={
+                  isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }
+                }
                 transition={{ duration: 0.6, delay: 0.2 + categoryIndex * 0.1 }}
                 className="bg-neutral-50 rounded-2xl p-8"
               >
@@ -63,10 +74,12 @@ export function Skills() {
                     <motion.div
                       key={skill}
                       initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                      transition={{ 
-                        duration: 0.4, 
-                        delay: 0.4 + categoryIndex * 0.1 + skillIndex * 0.05 
+                      animate={
+                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                      }
+                      transition={{
+                        duration: 0.4,
+                        delay: 0.4 + categoryIndex * 0.1 + skillIndex * 0.05,
                       }}
                       className="flex items-center gap-3"
                     >

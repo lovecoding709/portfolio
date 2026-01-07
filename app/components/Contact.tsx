@@ -1,35 +1,37 @@
 "use client";
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { useRef, useState } from 'react';
-import { Mail, Github, Linkedin } from 'lucide-react';
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import { Mail, Github, Linkedin } from "lucide-react";
 
 export function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission
-    console.log('Form submitted:', formData);
+    console.log("Form submitted:", formData);
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
   const socialLinks = [
-    { icon: Mail, label: 'Email', href: 'mailto:your.email@example.com' },
-    { icon: Github, label: 'GitHub', href: 'https://github.com' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://linkedin.com' }
+    { icon: Mail, label: "Email", href: "mailto:lovecoding81@gmail.com" },
+    { icon: Github, label: "GitHub", href: "https://github.com/lovecoding719" },
+    { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
   ];
 
   return (
@@ -54,8 +56,9 @@ export function Contact() {
           >
             <h3 className="mb-6">Let&apos;s work together</h3>
             <p className="text-neutral-600 mb-8">
-              I&apos;m always interested in hearing about new projects and opportunities. 
-              Whether you have a question or just want to say hi, I&apos;ll do my best to get back to you!
+              I&apos;m always interested in hearing about new projects and
+              opportunities. Whether you have a question or just want to say hi,
+              I&apos;ll do my best to get back to you!
             </p>
 
             <div className="space-y-4">
@@ -66,7 +69,9 @@ export function Contact() {
                     key={link.label}
                     href={link.href}
                     initial={{ opacity: 0, x: -20 }}
-                    animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                    animate={
+                      isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                    }
                     transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                     className="flex items-center gap-4 p-4 bg-white rounded-xl hover:shadow-md transition-shadow group"
                   >
